@@ -57,7 +57,6 @@ func (client *httpClient) makeRequest(method, url string, payload io.Reader, hea
 }
 
 func (client *httpClient) buildRequest(method, url string, payload io.Reader, headers map[string]string) (*http.Request, error) {
-
 	req, err := http.NewRequest(method, url, payload)
 	if err != nil {
 		return nil, err
